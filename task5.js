@@ -29,6 +29,12 @@ while (i != 10) {
 
 // random number
 function random(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+console.log(random(10, 20));
+
+// random number 2
+function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 console.log(random(10, 20));
