@@ -9,3 +9,13 @@ function ucFirst(str) {
   }
 }
 console.log(ucFirst("bob"));
+// Check for spam
+function checkSpam(str) {
+  str = str.toLowerCase();
+  if (str.includes("viagra") || str.includes("xxx")) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(checkSpam("bob "));
