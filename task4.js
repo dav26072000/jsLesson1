@@ -28,3 +28,29 @@ ageFunction2();
 if (-1 || 0) alert("first"); // -1 = true => true
 if (-1 && 0) alert("second"); // 0 = false => false
 if (null || (-1 && 1)) alert("third"); // -1 = true 1 = true => true
+
+// Promt task with functions
+
+function adminLogin(login, pass) {
+  let log = true;
+  if (login === "") {
+    console.log("Canceled");
+    log = false;
+  } else if (login !== "Admin") {
+    console.log("I dont know you");
+    log = false;
+  } else if (login === "Admin") {
+    if (pass === "") {
+      log = false;
+      console.log("Canceled");
+    } else if (pass !== "TheMaster") {
+      log = false;
+      console.log("Wrong password");
+    }
+  }
+  if (log === true) {
+    console.log("Welcome!!!!");
+  }
+}
+
+adminLogin("Admin", "TheMaster");
