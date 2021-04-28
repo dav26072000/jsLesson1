@@ -17,5 +17,13 @@ function numSubmit(num) {
     return false;
   }
 }
-
 console.log(numSubmit("d"));
+
+// An occasional infinite loop
+
+let i = 0;
+while (i != 10) {
+  i += 0.2;
+  console.log(i);
+}
+// due to js bag the number never equal 10 =)
