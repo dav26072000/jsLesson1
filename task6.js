@@ -19,3 +19,15 @@ function checkSpam(str) {
   }
 }
 console.log(checkSpam("bob "));
+// Truncate the text
+
+function truncate(str, maxlength) {
+  console.log(str.length);
+  if (str.length > maxlength) {
+    str = str.slice(maxlength) + "...";
+    return str;
+  } else {
+    return false;
+  }
+}
+console.log(truncate("lorem dsdas dsadas dsad", 10));
