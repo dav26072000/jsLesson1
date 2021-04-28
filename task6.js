@@ -9,25 +9,47 @@ function ucFirst(str) {
   }
 }
 console.log(ucFirst("bob"));
+
 // Check for spam
 function checkSpam(str) {
-  str = str.toLowerCase();
-  if (str.includes("viagra") || str.includes("xxx")) {
-    return true;
+  if (typeof str === "string") {
+    str = str.toLowerCase();
+    if (str.includes("viagra") || str.includes("xxx")) {
+      return true;
+    } else {
+      return false;
+    }
   } else {
     return false;
   }
 }
 console.log(checkSpam("bob "));
-// Truncate the text
 
+// Truncate the text
 function truncate(str, maxlength) {
-  console.log(str.length);
-  if (str.length > maxlength) {
-    str = str.slice(maxlength) + "...";
-    return str;
+  if (typeof str === "string") {
+    if (str.length > maxlength) {
+      str = str.slice(maxlength) + "...";
+      return str;
+    } else {
+      return false;
+    }
   } else {
     return false;
   }
 }
 console.log(truncate("lorem dsdas dsadas dsad", 10));
+
+//Extract the money
+function extractCurrencyValue(str) {
+  if (typeof str === "string") {
+    if (str.charAt(0) == "$") {
+      str = parseInt(str.slice(1));
+      return str;
+    }
+  } else {
+    return false;
+  }
+}
+
+console.log(extractCurrencyValue("$140"));
